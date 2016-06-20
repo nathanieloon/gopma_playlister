@@ -1,0 +1,70 @@
+/* Styles for playlists */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #fcfcfc;
+}
+
+#header {
+    width: 80%;
+    position: relative;
+    margin: auto;
+    margin-top: 5%;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 3em;   
+}
+
+#main {
+    width: 80%;
+    position: relative;
+    margin: auto;
+    margin-top: 5px;
+    background-color: #eeeeee;
+    padding: 1em;
+    border-radius: 3px;
+}
+
+table.playlists {
+    width: 100%;
+    border: 0;
+}
+
+table.playlists tr td {
+    font-weight: 300;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 1.15em;
+    border: 0;
+    padding: 5px 3px;
+    width: 30%;
+}
+
+table.playlists td a {
+    display: block;
+    text-decoration: none;
+    color: #222;
+}
+
+table.playlists td a:hover {
+    font-weight: 400;
+}
+
+table.playlists tr:nth-child(even) {
+    background-color: #dfdfdf;
+}
+
+table.playlists thead td {
+    font-weight: 700;
+    font-size: 2em;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+table.playlists tr.playlist:hover {
+    background-color: rgba(63, 191, 189, 0.39);
+}
+
+table.playlists tr.playlist:hover td a {
+    font-weight: 400;
+}
+
+

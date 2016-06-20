@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'playlists/style-reset.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'playlists/style.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+
+<head>
+    <title>GOPMA Playlists</title>
+</head>
+
+<body>    
+    <div id="header">
+        GOPMA Playlists
+    </div>
+    <div id="main">
+        {% if playlists %}
+        <table class="playlists">
+            <thead>
+                <td>Name</td>
+                <td>Creator</td>
+                <td>Last Updated</td>
+            </thead>
+        {% for pl in playlists %}
+            <tr class="playlist">
+                <td>
+                    <a href="https://play.google.com/music/playlist/{{ pl.share_token }}", target="_blank">
+    {{ pl.name }}</a>
+                </td>
+                <td>
+                    <a href="https://play.google.com/music/playlist/{{ pl.share_token }}", target="_blank">
+    {{ pl.owner }}</a>
+                </td>
+                <td>
+                    <a href="https://play.google.com/music/playlist/{{ pl.share_token }}", target="_blank">
+    {{ pl.last_updated }}</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% else %}
+        <p>No playlists are available.</p>
+    {% endif %}
+    </div>
+</body>
